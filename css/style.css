@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito+Sans:wght@200;400;600;800&display=swap');
+
+/* ==================== BODY ==================== */ 
+
+/* on modifie le style du body (par défaut) */
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* va prendre en compte le padding, les bordures etc... dans le calcule des largeurs et des hauteurs (ne fera pas +) */
+}
+
+body {
+    font-family: Nunito sans, sans-serif;
+}
+
+/* =================== NAVBAR ==================== */
+
+nav {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    z-index: 10;
+    background: linear-gradient(310deg, rgba(68,9,9,1) 25%, rgba(140,17,17,1) 71%, rgba(217,26,26,1) 100%);;
+    opacity: 0.8;
+}
+
+/* on cible le contenant <ul> */
+.nav-liste {
+    background: linear-gradient(310deg, rgba(68,9,9,1) 25%, rgba(140,17,17,1) 71%, rgba(217,26,26,1) 100%);;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    z-index: 20;
+}
+
+/* on cible les éléments <li> */
+.nav-item {
+    display: flex;
+    align-items: center;
+}
+
+/* on cible les liens <a> */
+.nav-item a {
+    font-size: 22px;
+    color: #F2F2F2;
+    text-decoration: none;
+    margin: 0 20px;
+    text-transform: uppercase; /* passer le texte en MAJ */
+}
+
+.nav-logo-menu {
+    position: absolute;
+    z-index: 25;
+    top: 10px;
+    right: 15px;
+    color: #F2F2F2;
+    font-size: 3.2rem; /* pour modifier la taille d'un svg FontAwesome, utiliser les propriétés "font" */
+    display: none;
+}
+
+/* -------------- ANIMATION NAVBAR --------------- */
+
+.nav-item a::after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0%;
+    height: 2px;
+    background-color: #F2F2F2;
+    transition: width 0.2s ease-in-out;
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .nav-logo-menu {
+        display: block;
+    }
+    .nav-liste {
+        padding-top: 35px;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+        display: none;
+    }
+    .nav-liste.active {
+        display: block;
+    }
+    .nav-item {
+        height: 70px;
+        justify-content: center;
+    }
+}
+
+/* ================== ACCUEIL ==================== */
+
+.accueil {
+    width: 100%;
+    height: 100vh;
+    min-height: 970px;
+    background-image: url(../image/accueil-pic-lum-down.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 1px dotted #BFA3A3;
+    padding-top: 1px;
+}
+
+.accueil-logo-kyoto {
+    border-radius: 50%;
+    width: 180px;
+    display: block;
+    margin: 179px auto 0;
+}
+
+.accueil h1 {
+    text-align: center;
+    font-size: 100px;
+    text-shadow: 0 5px 5px #3f0707;
+    color: #F2F2F2;
+    margin-top: 15px;
+    font-family: merienda one, sans-serif;
+    text-transform: uppercase;
+}
+
+.accueil .sous-titre {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: #F2F2F2;
+    margin: 5px 0;
+    text-shadow: 0 5px 5px #3f0707;
+}
+
+/* ----------- BOUTON "EN SAVOIR PLUS" ----------- */
+
+.btn-accueil {
+    border-radius : 9999px;
+    background-color: crimson;
+    border: 1px solid #333;
+    color: #F2F2F2;
+    text-align: center;
+    font-size: 22px;
+    display: block;
+    width: 200px;
+    height: 70px;
+    line-height: 70px;
+    text-decoration: none;
+    margin: 30px auto 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-accueil:hover {
+    background: rgb(177,0,36);
+    color: #F2F2F2;
+}
+
+/* ----------------------------------------------- */
+
+@media screen and (max-width : 1024px) {
+    .accueil {
+        background-position: right;
+}
+
+@media screen and (max-width : 850px) {
+    .accueil {
+        height: 650px;
+        min-height: auto;
+        background-position: right;
+    }
+    .accueil-logo-kyoto {
+        margin: 120px auto 0;
+    }
+    .accueil h1 {
+        font-size: 60px;
+    }
+    .accueil .sous-titre {
+        font-size: 23px;
+    }
+    .btn-accueil {
+        width: 150px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 18px;
+        margin: 15px auto 0;
+    }
+}
+
+@media screen and (max-width : 400px) {
+    .accueil {
+        height: 550px;
+    }
+    .accueil-logo-kyoto {
+        width: 150px;
+        margin: 110px auto 0;
+    }
+    .accueil h1 {
+        font-size: 35px;
+    }
+    .accueil .sous-titre {
+        font-size: 20px;
+    }
+    .btn-accueil {
+        width: 130px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 16px;
+    }
+    .nav-logo-menu {
+        top: 15px;
+        width: 40px;
+    }
+}
