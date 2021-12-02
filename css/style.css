@@ -21,13 +21,13 @@ nav {
     height: 70px;
     position: fixed;
     z-index: 10;
-    background: linear-gradient(310deg, rgba(68,9,9,1) 25%, rgba(140,17,17,1) 71%, rgba(217,26,26,1) 100%);;
+    background: linear-gradient(310deg, rgba(68,9,9,1) 25%, rgba(140,17,17,1) 71%, rgba(217,26,26,1) 100%);
     opacity: 0.8;
 }
 
 /* on cible le contenant <ul> */
 .nav-liste {
-    background: linear-gradient(310deg, rgba(68,9,9,1) 25%, rgba(140,17,17,1) 71%, rgba(217,26,26,1) 100%);;
+    background: linear-gradient(310deg, rgba(68,9,9,1) 25%, rgba(140,17,17,1) 71%, rgba(217,26,26,1) 100%);
     width: 100%;
     height: 100%;
     display: flex;
@@ -77,6 +77,8 @@ nav {
     width: 100%;
     border-radius: 20px;
 }
+
+/* ----------------------------------------------- */
 
 @media screen and (max-width: 700px) {
     .nav-logo-menu {
@@ -142,7 +144,7 @@ nav {
 
 .btn-accueil {
     border-radius : 9999px;
-    background-color: crimson;
+    background-color: #dc143c;
     border: 1px solid #333;
     color: #F2F2F2;
     text-align: center;
@@ -218,3 +220,133 @@ nav {
         width: 40px;
     }
 }
+
+/* ================= DÉCOUVRIR =================== */
+
+/* ------------------- GRID ---------------------- */
+
+.section-discover {
+    display: grid;
+    /* on paramètre notre grille !
+    1. la taille de nos rangées = 200px
+    2. le nombre de répétition de rangées = repeat(3, auto)
+    3. avec / on passe aux colonnes
+    4. une colonne au milieu de 600px 
+    5. de chaque coté 1fr/1fr qui se partagent le reste de l'espace dispo */
+    grid-template: 200px repeat(3, auto) / 1fr 600px 1fr;
+}
+
+.section-discover h2 {
+    grid-area: 1 / 1 / 2 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+}
+
+/* --------------- GRID POSITION ----------------- */
+
+.discover-bloc-1, .discover-image-grid-1 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.discover-bloc-2, .discover-image-grid-2 {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.discover-bloc-3, .discover-image-grid-3 {
+    grid-area: 4 / 2 / 5 / 3;
+}
+
+/* ----------------------------------------------- */
+
+.discover-bloc {
+    background: #333;
+    color: #F2F2F2;
+    position: relative;
+    border-radius: 2px;
+    height: 750px;
+    margin-bottom: 250px;
+}
+
+.discover-image-grid {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+    position: relative;
+}
+
+/* --------------- PARTIE GAUCHE ----------------- */
+
+.discover-image-grid-1, .discover-image-grid-3 {
+    top: 130px;
+    left: 20px;
+}
+
+.discover-bloc-left {
+    left: -300px;
+}
+
+.discover-texte-left {
+    width: 50%;
+    height: 100%;
+}
+
+.discover-texte-left h3 {
+    white-space: nowrap;
+    font-size: 35px;
+    margin: 30px 15px;
+}
+
+.discover-texte-left p {
+    line-height: 40px;
+    padding: 15px;
+}
+
+/* --------------- PARTIE DROITE ----------------- */
+
+.discover-bloc-right {
+    right: -300px;
+}
+
+.discover-image-grid-2 {
+    top: 130px;
+    left: 100px;
+}
+
+.discover-texte-right {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.discover-texte-right h3 {
+    position: relative;
+    font-size: 35px;
+    margin: 30px 15px;
+}
+
+.discover-texte-right p {
+    line-height: 40px;
+    padding: 15px;
+}
+
+/* ----------- BOUTON "EN SAVOIR PLUS" ----------- */
+
+.discover-bloc button {
+    border-radius: 9999px;
+    outline: none;
+    border: none;
+    background: #dc143c;
+    border: 1px solid #333;
+    color: #F2F2F2;
+    padding: 20px 35px;
+    font-size: 20px;
+    margin: 35px auto;
+    cursor: pointer;
+    display: block;
+}
+
