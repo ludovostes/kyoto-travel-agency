@@ -1,5 +1,20 @@
+/* -------------------- FONT --------------------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Nunito+Sans:wght@200;400;600;800&display=swap');
+
+/* ---------------- CODE COULEUR ----------------- */
+
+/* Color Theme Swatches in Hex via Adobe Color */
+.color-kyoto-travel-agency-1-hex { color: #0C0C32; }
+.color-kyoto-travel-agency-2-hex { color: #3C3F69; }
+.color-kyoto-travel-agency-3-hex { color: #F2F2F2; }
+.color-kyoto-travel-agency-4-hex { color: #FF8291; }
+.color-kyoto-travel-agency-5-hex { color: #FF0037; }
+.color-kyoto-travel-agency-6-hex { color: #A5004B; }
+
+/* Color Theme Shadow in Hex */
+.color-kyoto-travel-agency-7-hex { color: #4E0022; }
 
 /* ==================== BODY ==================== */ 
 
@@ -21,13 +36,11 @@ nav {
     height: 70px;
     position: fixed;
     z-index: 10;
-    background: linear-gradient(310deg, rgba(68,9,9,1) 25%, rgba(140,17,17,1) 71%, rgba(217,26,26,1) 100%);
-    opacity: 0.8;
 }
 
 /* on cible le contenant <ul> */
 .nav-liste {
-    background: linear-gradient(310deg, rgba(68,9,9,1) 25%, rgba(140,17,17,1) 71%, rgba(217,26,26,1) 100%);
+    background: linear-gradient(122deg, rgba(255,0,55,0.8) 0%, rgba(165,0,75,0.8) 25%, rgba(12,12,50,0.8) 100%);
     width: 100%;
     height: 100%;
     display: flex;
@@ -45,6 +58,7 @@ nav {
 /* on cible les liens <a> */
 .nav-item a {
     font-size: 22px;
+    font-weight: 700;
     color: #F2F2F2;
     text-decoration: none;
     margin: 0 20px;
@@ -110,7 +124,7 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom: 1px dotted #BFA3A3;
+    border-bottom: 5px dotted #F2F2F2;
     padding-top: 1px;
 }
 
@@ -124,7 +138,7 @@ nav {
 .accueil h1 {
     text-align: center;
     font-size: 100px;
-    text-shadow: 0 5px 5px #3f0707;
+    text-shadow: 0 5px 4px #4E0022;
     color: #F2F2F2;
     margin-top: 15px;
     font-family: merienda one, sans-serif;
@@ -137,29 +151,32 @@ nav {
     font-weight: bold;
     color: #F2F2F2;
     margin: 5px 0;
-    text-shadow: 0 5px 5px #3f0707;
+    text-shadow: 0 5px 5px #4E0022;
+    text-decoration: #FF8291;
+    text-transform: uppercase; /* passer le texte en MAJ */
 }
 
 /* ----------- BOUTON "EN SAVOIR PLUS" ----------- */
 
 .btn-accueil {
     border-radius : 9999px;
-    background-color: #dc143c;
-    border: 1px solid #333;
+    background: #FF0037; 
+    border: 2.5px solid #A5004B;
     color: #F2F2F2;
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 600;
     display: block;
     width: 200px;
     height: 70px;
-    line-height: 70px;
+    line-height: 65px;
     text-decoration: none;
     margin: 30px auto 0;
-    transition: all 0.2s ease-in-out;
+    
 }
 
 .btn-accueil:hover {
-    background: rgb(177,0,36);
+    background: #A5004B;
     color: #F2F2F2;
 }
 
