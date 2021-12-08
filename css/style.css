@@ -519,3 +519,127 @@ nav {
     }
 }
 
+/* ================== TARIFS ===================== */
+
+.section-tarifs {
+    padding-bottom: 150px;
+    border-bottom: 1px dashed #333;
+}
+
+.section-tarifs h3 {
+    text-align: center;
+    font-size: 45px;
+    margin: 120px O 20px;
+    padding: 0 30px;
+}
+
+.section-tarifs hr {
+    width: 200px;
+    margin: 20px auto 100px;
+}
+
+.tarifs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tarifs-card {
+    width: 350px;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.5);
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+.tarifs-card:hover {
+    transform: translateY(-4px);
+}
+
+.tarifs-card h4 {
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 35px;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+    background-color: #FF8291;
+}
+
+.tarifs-card span {
+    display: block;
+    text-align: center;
+    padding: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.tarifs-card:nth-child(2) h4 {
+    background-color: #FF0037;
+}
+
+.tarifs-card:nth-child(3) h4 {
+    background-color: #A5004B;
+}
+
+.tarifs-card p {
+    font-size: 18px;
+    padding: 20px 10px;
+    border-top: 1px solid #F2F2F2;
+}
+
+.tarifs-card p:last-of-type {
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.tarifs-card p:nth-child(odd) {
+    background: rgb(195, 195, 195, 0.2);
+}
+
+/* ------------ BOUTON "RESERVATION" ------------- */
+
+.tarifs-card a {
+    border-radius: 9999px;
+    outline: none;
+    border: none;
+    border: 1px solid #333;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    margin: 20px auto;
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+.tarifs-card a:hover {
+    background: #A5004B;
+    color: #F2F2F2;
+}
+
+/* ----------------------------------------------- */
+
+@media screen and (max-width : 900px) {
+    .section-tarifs h3 {
+        font-size: 35px;
+        margin: 80px 0 80px;
+    }
+}
+
+@media screen and (max-width : 425px) {
+    .section-tarifs h3 {
+        font-size: 30px;
+        padding: 0 10px;
+        margin: 50px 0;
+    }
+    .section-tarifs hr {
+        width: 200px;
+        margin: 20px auto 20px;
+    }
+}
+
+/* ================== CONTACT ==================== */
