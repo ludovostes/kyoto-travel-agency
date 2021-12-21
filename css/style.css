@@ -448,7 +448,7 @@ nav {
 
 /* ------------------- LIGNES -------------------- */
 
-.line-left {
+/* .line-left {
     grid-area: 1 / 2 / -1 / 3;
     border-left: 1.5px solid #3c3f69;
 }
